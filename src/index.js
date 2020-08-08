@@ -103,4 +103,4 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 
-h2.innerHTML = `${day}, ${month} ${date} ${year} ${hours}:${minutes}`;
+h2.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
