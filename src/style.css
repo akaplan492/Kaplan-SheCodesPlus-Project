@@ -1,0 +1,64 @@
+body {
+  margin: 10px;
+  font-family: "Roboto", sans-serif;
+}
+
+div.container {
+  margin-top: 30px;
+}
+
+button.btn-success {
+  margin-left: 200px;
+}
+
+h1 {
+  font-weight: 100px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 700px;
+  margin-left: 40px;
+}
+
+.units {
+  font-size: 20px;
+}
+
+div.card.capsule {
+  margin: 0 auto;
+  min-width: 540px;
+  max-width: 700px;
+}
+
+.card-img-top {
+  width: 100px;
+  margin-left: 40px;
+}
+
+p.card-text {
+  font-size: 18px;
+}
+
+.day {
+  margin-left: 20px;
+}
+
+div.five-day-forecast {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+div.weather-icon-future img {
+  width: 30px;
+  margin-left: 2px;
+}
+
+.btn-group {
+  float: right;
+  margin: 10px 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
+}
