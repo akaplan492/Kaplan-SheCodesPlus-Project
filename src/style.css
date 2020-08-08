@@ -22,7 +22,7 @@ h2 {
 h3 {
   font-size: 36px;
   font-weight: 700px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .units {
@@ -37,11 +37,12 @@ div.card.capsule {
 
 .card-img-top {
   width: 100px;
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 p.card-text {
   font-size: 18px;
+  margin-left: 10px;
 }
 
 .day {
