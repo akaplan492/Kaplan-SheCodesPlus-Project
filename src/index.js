@@ -93,7 +93,6 @@ let months = [
 let day = days[currentDate.getDay()];
 let month = months[currentDate.getMonth()];
 let date = currentDate.getDate();
-let year = currentDate.getFullYear();
 let hours = currentDate.getHours();
 if (hours < 10) {
   hours = `0${hours}`;
