@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Inter&family=Roboto&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f4d0f94a6f.js" crossorigin="anonymous"></script>
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card capsule">
+
+            <div class="card-body">
+
+                <form class="form-inline" id="searchForm">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="city" class="sr-only">search city</label>
+                        <input type="city" class="form-control" id="inputCity" placeholder="Search City or Zip Code">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2" id="cityButton"><i
+                            class="fas fa-search"></i></button>
+                    <div>
+                        <button type="button" class="btn btn-success mb-2" id="locationButton">Use Current
+                            Location</button>
+                    </div>
+                </form>
+
+                </br>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h1>
+                            Jersey City
+                        </h1>
+
+                        <h2>
+                            Tuesday, July 21st 12:49PM
+                        </h2>
+
+                        </br>
+                        <h3>
+                            <div class="row">
+                                <div id="temperature"> 33 </div>
+                                <span class="units">
+                                    <a href="#" id="celsius-link">ºC </a>|
+                                    <a href="#" id="fahrenheit-link">ºF</a>
+                                </span>
+                            </div>
+                    </div>
+                    <div class="col-6">
+                        <img class="card-img-top" src="images/fair.png" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">Condition: <span id="descriptionData">Partly cloudy</span>
+                                </br> Wind: <span id="windData">10</span>MPH <i class="fas fa-wind"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                </br>
+
+                <div class="card five-day-forecast">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col day">
+                                Wed
+                                <div class="weather-icon-future">
+                                    <img src="images/storm.png">
+                                </div>
+                                <div class="temp-high-low-future">
+                                    85º | 73º
+                                </div>
+                            </div>
+                            <div class="col day">
+                                Thurs
+                                <div class="weather-icon-future">
+                                    <img src="images/fair.png">
+                                </div>
+                                <div class="temp-high-low-future">
+                                    90º | 75º
+                                </div>
+                            </div>
+                            <div class="col day">
+                                Fri
+                                <div class="weather-icon-future">
+                                    <img src="images/fair.png">
+                                </div>
+                                <div class="temp-high-low-future">
+                                    96º | 76º
+                                </div>
+                            </div>
+                            <div class="col day">
+                                Sat
+                                <div class="weather-icon-future">
+                                    <img src="images/storm.png">
+                                </div>
+                                <div class="temp-high-low-future">
+                                    98º | 79º
+                                </div>
+                            </div>
+                            <div class="col day">
+                                Sun
+                                <div class="weather-icon-future">
+                                    <img src="images/storm.png">
+                                </div>
+                                <div class="temp-high-low-future">
+                                    94º | 75º
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scale">
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn btn-outline-secondary" id="fahrenheit-button">ºF</button>
+                    <button type="button" class="btn btn-outline-secondary" id="celsius-button">ºC</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script src="src/index.js"></script>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
