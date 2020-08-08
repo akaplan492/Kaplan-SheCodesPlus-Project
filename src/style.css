@@ -1,14 +1,29 @@
 body {
-  margin: 10px;
+  margin: 20px;
   font-family: "Roboto", sans-serif;
+  position: fixed;
 }
 
 div.container {
   margin-top: 30px;
 }
 
+div.card-capsule {
+  position: fixed;
+}
+
+div.card-body {
+  position: static;
+}
+
+button.btn-primary {
+  margin-left: -10px;
+  position: relative;
+}
+
 button.btn-success {
-  margin-left: 200px;
+  margin-left: 60px;
+  display: inline-block;
 }
 
 h1 {
@@ -62,4 +77,9 @@ div.weather-icon-future img {
   float: right;
   margin: 10px 20px;
   box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+.small {
+  display: inline;
+  position: absolute;
 }
