@@ -60,7 +60,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-//Current Date and Timelet currentDate = new Date();
+//Current Date and Time
 let currentDate = new Date();
 
 let h2 = document.querySelector("h2");

@@ -18,6 +18,11 @@ h3 {
   margin-left: 60px;
 }
 
+li {
+  list-style: none;
+  font-size: 16px;
+}
+
 .container {
   margin-top: 30px;
   max-width: 600px;
@@ -39,6 +44,10 @@ h3 {
   max-width: 700px;
 }
 
+.card-text {
+  margin-top: -30px;
+}
+
 .five-day-forecast {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -46,11 +55,6 @@ h3 {
 .weather-icon-future img {
   width: 30px;
   margin-left: 2px;
-}
-
-p.card-text {
-  font-size: 18px;
-  margin-left: 10px;
 }
 
 .units {
