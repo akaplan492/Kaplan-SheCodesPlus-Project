@@ -4,28 +4,6 @@ body {
   position: fixed;
 }
 
-div.container {
-  margin-top: 30px;
-}
-
-div.card-capsule {
-  position: fixed;
-}
-
-div.card-body {
-  position: static;
-}
-
-button.btn-primary {
-  margin-left: -10px;
-  position: relative;
-}
-
-button.btn-success {
-  margin-left: 60px;
-  display: inline-block;
-}
-
 h1 {
   font-weight: 100px;
 }
@@ -40,19 +18,34 @@ h3 {
   margin-left: 60px;
 }
 
-.units {
-  font-size: 20px;
+.container {
+  margin-top: 30px;
+  max-width: 600px;
 }
 
-div.card.capsule {
+.btn-primary {
+  margin-left: -10px;
+  position: relative;
+}
+
+.btn-success {
+  margin-left: 60px;
+  display: inline-block;
+}
+
+.card.capsule {
   margin: 0 auto;
   min-width: 540px;
   max-width: 700px;
 }
 
-.card-img-top {
-  width: 100px;
-  margin-left: 60px;
+.five-day-forecast {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.weather-icon-future img {
+  width: 30px;
+  margin-left: 2px;
 }
 
 p.card-text {
@@ -60,17 +53,17 @@ p.card-text {
   margin-left: 10px;
 }
 
+.units {
+  font-size: 20px;
+}
+
+.card-img-top {
+  width: 100px;
+  margin-left: 60px;
+}
+
 .day {
   margin-left: 20px;
-}
-
-div.five-day-forecast {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-div.weather-icon-future img {
-  width: 30px;
-  margin-left: 2px;
 }
 
 .btn-group {
