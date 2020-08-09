@@ -7,6 +7,8 @@ function displayWeatherCondition(response) {
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#descriptionData").innerHTML =
     response.data.weather[0].main;
+  document.querySelector("#humidityData").innerHTML =
+    response.data.main.humidity;
   document.querySelector("#windData").innerHTML = Math.round(
     response.data.wind.speed
   );
