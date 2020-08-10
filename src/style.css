@@ -71,12 +71,16 @@ li {
 }
 
 .weather-icon-future img {
-  width: 30px;
+  width: 40px;
   margin-left: 2px;
 }
 
 .day {
   margin-left: 20px;
+}
+
+.temp-high-low-future {
+  margin-left: -4px;
 }
 
 .btn-group {

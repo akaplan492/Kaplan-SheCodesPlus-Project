@@ -1,46 +1,49 @@
 //Current Date and Time
-let currentDate = new Date();
+function formatDate(timestamp) {
+  let currentDate = new Date(timestamp);
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
-let h2 = document.querySelector("h2");
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let day = days[currentDate.getDay()];
+  let month = months[currentDate.getMonth()];
+  let date = currentDate.getDate();
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let day = days[currentDate.getDay()];
-let month = months[currentDate.getMonth()];
-let date = currentDate.getDate();
-let hours = currentDate.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = currentDate.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+  return `${day} ${month} ${date} ${formatHours(timestamp)}`;
 }
 
-h2.innerHTML = `${day}, ${month} ${date} ${hours}:${minutes}`;
+function formatHours(timestamp) {
+  let currentDate = new Date(timestamp);
+  let hours = currentDate.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = currentDate.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
 
 //Show temperature of search city
 function displayWeatherCondition(response) {
@@ -48,6 +51,7 @@ function displayWeatherCondition(response) {
     response.data.main.temp
   );
   document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("h2").innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector("#descriptionData").innerHTML =
     response.data.weather[0].main;
   document.querySelector("#humidityData").innerHTML =
@@ -67,10 +71,34 @@ function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
 }
 
+//Show forecast
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+
+  forecastElement.innerHTML = `
+    <div class="col day">
+      ${formatHours(forecast.dt * 1000)}
+        <div class="weather-icon-future">
+          <img src="https://openweathermap.org/img/wn/${
+            forecast.weather[0].icon
+          }@2x.png" alt="">
+        </div>
+        <div class="temp-high-low-future">
+           ${Math.round(forecast.main.temp_max)}º | ${Math.round(
+    forecast.main.temp_min
+  )}º
+        </div>
+       </div>`;
+}
+
 function search(city) {
   let apiKey = "6afd4a55eb7aa4136dc45db8d1efb3c6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
