@@ -66,10 +66,6 @@ li {
   margin-top: -30px;
 }
 
-.five-day-forecast {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
 .weather-icon-future img {
   width: 40px;
   margin-left: 2px;

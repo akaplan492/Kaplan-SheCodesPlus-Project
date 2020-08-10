@@ -74,10 +74,13 @@ function displayWeatherCondition(response) {
 //Show forecast
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
-  forecastElement.innerHTML = `
-    <div class="col day">
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
       ${formatHours(forecast.dt * 1000)}
         <div class="weather-icon-future">
           <img src="https://openweathermap.org/img/wn/${
@@ -86,10 +89,11 @@ function displayForecast(response) {
         </div>
         <div class="temp-high-low-future">
            ${Math.round(forecast.main.temp_max)}º | ${Math.round(
-    forecast.main.temp_min
-  )}º
+      forecast.main.temp_min
+    )}º
         </div>
        </div>`;
+  }
 }
 
 function search(city) {
