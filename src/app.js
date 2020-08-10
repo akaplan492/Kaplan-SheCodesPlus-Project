@@ -80,8 +80,8 @@ function displayForecast(response) {
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
-    <div class="col-2">
-      ${formatHours(forecast.dt * 1000)}
+      <div class = "col-2">
+            ${formatHours(forecast.dt * 1000)}
         <div class="weather-icon-future">
           <img src="https://openweathermap.org/img/wn/${
             forecast.weather[0].icon
@@ -92,7 +92,7 @@ function displayForecast(response) {
       forecast.main.temp_min
     )}º
         </div>
-       </div>`;
+        </div>`;
   }
 }
 
