@@ -23,16 +23,22 @@ function displayWeatherCondition(response) {
     .setAttribute("alt", response.data.weather[0].main);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
+function search(city) {
   let apiKey = "6afd4a55eb7aa4136dc45db8d1efb3c6";
-  let city = document.querySelector("#inputCity").value;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
-let search = document.querySelector("#cityButton");
-search.addEventListener("click", handleSubmit);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#inputCity");
+  search(cityInputElement.value);
+}
+
+let citySearch = document.querySelector("#cityButton");
+citySearch.addEventListener("click", handleSubmit);
+
+search("New York");
 
 //Show temperature using geolocation
 function showPosition(position) {

@@ -44,6 +44,15 @@ li {
   display: inline-block;
 }
 
+.units {
+  font-size: 20px;
+}
+
+.card-img-top {
+  width: 105px;
+  margin-left: 60px;
+}
+
 .card-text {
   margin-top: -30px;
 }
@@ -55,15 +64,6 @@ li {
 .weather-icon-future img {
   width: 30px;
   margin-left: 2px;
-}
-
-.units {
-  font-size: 20px;
-}
-
-.card-img-top {
-  width: 105px;
-  margin-left: 60px;
 }
 
 .day {
