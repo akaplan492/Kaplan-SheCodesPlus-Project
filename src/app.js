@@ -88,9 +88,9 @@ function displayForecast(response) {
           }@2x.png" alt="">
         </div>
         <div class="temp-high-low-future">
-           ${Math.round(forecast.main.temp_max)}º | ${Math.round(
+           ${Math.round(forecast.main.temp_max)}ºC | ${Math.round(
       forecast.main.temp_min
-    )}º
+    )}ºC
         </div>
         </div>`;
   }
@@ -129,7 +129,7 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector("#locationButton");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//Temperature Unit Conversion
+//Main temperature unit Conversion
 function convertToFahrenheit(event) {
   event.preventDefault();
   celsiusLink.classList.remove("active");

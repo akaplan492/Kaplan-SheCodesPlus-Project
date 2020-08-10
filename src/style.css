@@ -35,12 +35,12 @@ li {
 }
 
 .btn-primary {
-  margin-left: 10px;
+  margin-left: 5px;
   position: relative;
 }
 
 .btn-success {
-  margin-left: 100px;
+  margin-left: 50px;
   display: inline-block;
 }
 
@@ -73,12 +73,6 @@ li {
 
 .temp-high-low-future {
   margin-left: -4px;
-}
-
-.btn-group {
-  float: right;
-  margin: 10px 20px;
-  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.15);
 }
 
 .small {
