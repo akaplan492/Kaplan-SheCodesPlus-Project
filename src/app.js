@@ -88,9 +88,9 @@ function displayForecast(response) {
           }@2x.png" alt="">
         </div>
         <div class="temp-high-low-future">
-           ${Math.round(forecast.main.temp_max)}ºC | ${Math.round(
+           ${Math.round(forecast.main.temp_max)}º | ${Math.round(
       forecast.main.temp_min
-    )}ºC
+    )}º
         </div>
         </div>`;
   }
