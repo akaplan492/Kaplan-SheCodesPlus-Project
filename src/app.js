@@ -16,7 +16,7 @@ function displayWeatherCondition(response) {
     .querySelector("#current-weather-icon")
     .setAttribute(
       "src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
   document
     .querySelector("#current-weather-icon")
