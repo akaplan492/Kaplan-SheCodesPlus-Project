@@ -100,6 +100,8 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 //Temperature Unit Conversion
 function convertToFahrenheit(event) {
   event.preventDefault();
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
   temperature = Number(temperature);
@@ -108,6 +110,8 @@ function convertToFahrenheit(event) {
 
 function convertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let temperatureElement = document.querySelector("#temperature");
   let temperature = temperatureElement.innerHTML;
   temperatureElement.innerHTML = Math.round(((temperature - 32) * 5) / 9);
