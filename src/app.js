@@ -115,10 +115,14 @@ let citySearch = document.querySelector("#cityButton");
 citySearch.addEventListener("click", handleSubmit);
 
 //Show temperature using geolocation
+
 function showPosition(position) {
   let apiKey = "6afd4a55eb7aa4136dc45db8d1efb3c6";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}`;
+  axios.get(forecastUrl).then(displayForecast);
 }
 
 function getCurrentLocation(event) {
