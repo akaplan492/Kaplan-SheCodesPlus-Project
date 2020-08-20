@@ -117,7 +117,7 @@ citySearch.addEventListener("click", handleSubmit);
 //Show temperature using geolocation
 
 function showPosition(position) {
-  let apiKey = "6afd4a55eb7aa4136dc45db8d1efb3c6";
+  let apiKey = "d5e33d311917d5da72b86465c6c9f2d6";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
