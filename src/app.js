@@ -91,13 +91,13 @@ function displayForecast(response) {
            ${Math.round(forecast.main.temp_max)}º | ${Math.round(
       forecast.main.temp_min
     )}º
-        </div>
+        </>
         </div>`;
   }
 }
 
 function search(city) {
-  let apiKey = "11350189fb0db38d3bb8e9cb50cad530";
+  let apiKey = "be58f853e991e177e19e8b549812669c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
@@ -117,7 +117,7 @@ citySearch.addEventListener("click", handleSubmit);
 //Show temperature using geolocation
 
 function showPosition(position) {
-  let apiKey = "d5e33d311917d5da72b86465c6c9f2d6";
+  let apiKey = "be58f853e991e177e19e8b549812669c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
@@ -161,4 +161,4 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-search("New York");
+search("Saint Paul");
